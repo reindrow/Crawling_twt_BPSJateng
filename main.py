@@ -11,19 +11,19 @@ st.markdown(
 
 option = st.sidebar.selectbox(
     "Menu",
-    ("Halaman Utama", "Crawling Data", "Profil BPS Jateng")
+    ("Halaman Utama", "Crawling Twitter", "Profil BPS Jateng")
 )
 
 if option == 'Halaman Utama' or option == '':
     image = Image.open('logo bps.png')
-    st.image(image, caption='')
+    st.image(image)
     image = Image.open('bps jateng 2.jpg')
     st.image(image, caption='Badan Pusat Statistika Jateng')
 
-elif option == 'Crawling Data':
+elif option == 'Crawling Twitter':
     image = Image.open('logo bps.png')
-    st.image(image, caption='Badan Pusat Statistika Jateng')
-    st.write("""# Crawling Data""")
+    st.image(image)
+    st.write("""# Crawling Data Twitter""")
     crawling=st.text_input("Masukan nama atau judul data yang ingin dicrawling")
     number = st.text_input ('Jumlah data yang ingin dicrawling')
     namafile=st.text_input("Download dengan judul: ") 
@@ -56,7 +56,7 @@ elif option == 'Crawling Data':
 
 elif option == 'Profil BPS Jateng':
     image = Image.open('logo bps.png')
-    st.image(image, caption='Badan Pusat Statistika Jateng')
+    st.image(image)
     st.write("""# Profil BPS Jawa Tengah""")  
     st.subheader(':blue[Informasi Umum] :book:')
     st.write ('''Badan Pusat Statistik adalah Lembaga Pemerintah Non-Kementrian yang bertanggung jawab langsung kepada Presiden. Sebelumnya, BPS merupakan Biro Pusat Statistik, yang dibentuk berdasarkan UU Nomor 6 Tahun 1960 tentang Sensus dan UU Nomer 7 Tahun 1960 tentang Statistik. Sebagai pengganti kedua UU tersebut ditetapkan UU Nomor 16 Tahun 1997 tentang Statistik. Berdasarkan UU ini yang ditindaklanjuti dengan peraturan perundangan dibawahnya, secara formal nama Biro Pusat Statistik diganti menjadi Badan Pusat Statistik.''')
